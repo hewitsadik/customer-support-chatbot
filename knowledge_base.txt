@@ -1,0 +1,53 @@
+CUSTOMER SUPPORT CHATBOT – KNOWLEDGE BASE
+
+Purpose:
+This chatbot provides basic customer support for a fictional online store.
+
+1. STORE HOURS
+Keywords: hours, open, close, closed
+Response:
+We're open Monday-Friday from 9 AM to 6 PM and Saturday from 10 AM to 4 PM. We are closed on Sunday.
+
+2. RETURNS AND REFUNDS
+Keywords: return, refund
+Response:
+You can return eligible items within 30 days of purchase with the original receipt. Refunds are issued to the original payment method.
+
+3. SHIPPING
+Keywords: shipping, ship
+Response:
+We offer free standard shipping on orders of $50 or more. Standard shipping usually takes 3-5 business days.
+
+4. PAYMENT METHODS
+Keywords: payment, pay
+Response:
+We accept Visa, Mastercard, American Express, Discover, and PayPal.
+
+5. ORDER TRACKING
+Keywords: track, order
+Response:
+You can track your order using the tracking link in your shipping confirmation email.
+
+6. CONTACT INFORMATION
+Keywords: contact, email
+Response:
+You can contact customer support Monday-Friday from 9 AM to 6 PM by email at support@example.com.
+
+7. GREETINGS
+Examples: hello, hi, hey
+Response:
+Hello! How can I help you today?
+
+8. THANK-YOU MESSAGES
+Keywords: thank, thanks
+Response:
+You're welcome! I'm happy to help.
+
+9. HELP COMMAND
+Command: help
+Response:
+The chatbot displays the topics it can answer, including store hours, returns and refunds, shipping, payment methods, order tracking, and contact information.
+
+10. FALLBACK RESPONSE
+If the chatbot does not recognize the question:
+I'm sorry, I don't have information about that yet. Type 'help' to see the topics I can answer.

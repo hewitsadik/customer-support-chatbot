@@ -1,0 +1,43 @@
+CUSTOMER SUPPORT CHATBOT – USER TESTING
+
+Purpose:
+The chatbot was tested with different types of customer questions to verify that keyword matching, help, and fallback responses work correctly.
+
+TEST 1 – STORE HOURS
+Question: What are your store hours?
+Result: The chatbot provided the correct weekday, Saturday, and Sunday store hours.
+Status: PASS
+
+TEST 2 – RETURNS
+Question: May I return an item?
+Result: The chatbot explained the 30-day return policy and refund method.
+Status: PASS
+
+TEST 3 – SHIPPING
+Question: Do you offer free shipping?
+Result: The chatbot explained that free standard shipping is available on orders of $50 or more.
+Status: PASS
+
+TEST 4 – PAYMENT METHODS
+Question: What payment methods do you accept?
+Result: The chatbot listed Visa, Mastercard, American Express, Discover, and PayPal.
+Status: PASS
+
+TEST 5 – UNKNOWN QUESTION / FALLBACK
+Question: Do you sell shoes?
+Result: The chatbot displayed the fallback response and suggested typing "help" to see available topics.
+Status: PASS
+
+TEST 6 – THANK-YOU MESSAGE
+Question: Thank you for your help.
+Result: The chatbot responded, "You're welcome! I'm happy to help."
+Status: PASS
+
+ADDITIONAL TESTING AND DEBUGGING
+
+During testing, the word "shipping" initially triggered the greeting response because the keyword "hi" appeared inside the word "shipping." The greeting logic was updated to recognize exact greetings such as "hi," "hello," and "hey."
+
+The store-hours logic was also expanded to recognize variations such as "open," "close," and "closed."
+
+Final Result:
+All six final test scenarios passed successfully. The chatbot handled supported questions and unknown questions without crashing.

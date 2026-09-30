@@ -1,0 +1,98 @@
+CUSTOMER SUPPORT CHATBOT – DOCUMENTATION
+
+PROJECT OVERVIEW
+
+This project is a beginner-level rule-based customer support chatbot for a fictional online store. The chatbot uses HTML, CSS, and JavaScript to provide automated responses to frequently asked customer questions.
+
+The chatbot does not require an external AI API. It uses keyword matching and predefined responses.
+
+
+HOW TO USE THE CHATBOT
+
+1. Open the project folder.
+2. Open index.html in a web browser such as Google Chrome or Microsoft Edge.
+3. The chatbot displays a welcome message.
+4. Type a question in the message box.
+5. Click Send or press Enter.
+6. The chatbot analyzes the message and displays an appropriate response.
+7. Type "help" to view the topics the chatbot can answer.
+
+
+SUPPORTED TOPICS
+
+The chatbot can provide information about:
+
+- Store hours
+- Returns and refunds
+- Shipping
+- Payment methods
+- Order tracking
+- Contact information
+- Greetings
+- Thank-you messages
+
+The chatbot also includes a fallback response for questions it does not recognize.
+
+
+TECHNICAL APPROACH
+
+The chatbot was created using:
+
+- HTML for the webpage structure
+- CSS for the user interface and visual design
+- JavaScript for chatbot logic and interaction
+- Keyword matching for identifying customer questions
+
+The chatbot converts user messages to lowercase and checks for specific keywords. When a matching keyword is found, the chatbot returns the appropriate predefined response.
+
+
+FEATURES
+
+- Text input and chatbot responses
+- Welcome message
+- Help command
+- Fallback response for unknown questions
+- Simple web-based chat interface
+- Enter-key support
+- Conversation history during the current browser session
+- Support for several variations of common questions
+
+
+LIMITATIONS
+
+This is a rule-based chatbot, so it can only respond to topics and keywords included in its code.
+
+It does not understand complex natural language like a full AI model.
+
+The chatbot does not connect to real customer accounts, orders, inventory, or payment systems.
+
+Conversation history is not saved after the webpage is refreshed or closed.
+
+The business information used in the chatbot is fictional.
+
+
+POTENTIAL IMPROVEMENTS
+
+Future versions could include:
+
+- Integration with an AI API for more flexible responses
+- Connection to real business data
+- Real order tracking
+- Quick-reply buttons
+- Typing indicators
+- Saved conversation history
+- Expanded knowledge base
+- Improved mobile interface
+- Deployment as a publicly accessible website
+
+
+TESTING
+
+The chatbot was tested with multiple question types, including store hours, returns, shipping, payment methods, an unknown question, and a thank-you message.
+
+Testing also identified a keyword-matching issue in which "shipping" initially triggered the greeting "hi." The greeting logic was corrected, and final testing confirmed that the chatbot responded appropriately to the tested scenarios.
+
+
+CONCLUSION
+
+The project successfully demonstrates a functional rule-based customer support chatbot with a simple and user-friendly web interface. It meets the core challenge requirements by providing text input/output, a welcome message, help functionality, fallback handling, a knowledge base, and documented user testing.

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Support Chatbot</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+    }
+
+    .chat-container {
+      width: 420px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+
+    .header {
+      background: #333;
+      color: white;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .header h2 {
+      margin: 0;
+    }
+
+    .header p {
+      margin: 5px 0 0;
+      font-size: 13px;
+    }
+
+    #chatBox {
+      height: 400px;
+      overflow-y: auto;
+      padding: 15px;
+    }
+
+    .bot, .user {
+      padding: 10px 12px;
+      margin: 8px 0;
+      border-radius: 10px;
+      max-width: 80%;
+      line-height: 1.4;
+    }
+
+    .bot {
+      background: #e9ecef;
+    }
+
+    .user {
+      background: #d7ebff;
+      margin-left: auto;
+    }
+
+    .input-area {
+      display: flex;
+      border-top: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    #userInput {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      margin-left: 8px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="chat-container">
+
+  <div class="header">
+    <h2>Customer Support Bot</h2>
+    <p>Ask about hours, returns, shipping, payments, or order tracking.</p>
+  </div>
+
+  <div id="chatBox">
+    <div class="bot">
+      Hi! Welcome to our online store. How can I help you today?
+      Type <strong>help</strong> to see what I can answer.
+    </div>
+  </div>
+
+  <div class="input-area">
+    <input
+      type="text"
+      id="userInput"
+      placeholder="Type your message here..."
+      onkeydown="if(event.key === 'Enter') sendMessage()"
+    >
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+</div>
+
+<script>
+
+function getBotResponse(userMessage) {
+
+  const message = userMessage.toLowerCase().trim();
+
+  if (
+    message.includes("thank") ||
+    message.includes("thanks")
+  ) {
+    return "You're welcome! I'm happy to help.";
+  }
+
+  if (message === "help") {
+    return "I can help with store hours, returns and refunds, shipping, payment methods, order tracking, and contact information.";
+  }
+
+  if (
+    message === "hello" ||
+    message === "hi" ||
+    message === "hey"
+  ) {
+    return "Hello! How can I help you today?";
+  }
+
+  if (
+    message.includes("hours") ||
+    message.includes("open") ||
+    message.includes("close") ||
+    message.includes("closed")
+  ) {
+    return "We're open Monday-Friday from 9 AM to 6 PM and Saturday from 10 AM to 4 PM. We are closed on Sunday.";
+  }
+
+  if (
+    message.includes("return") ||
+    message.includes("refund")
+  ) {
+    return "You can return eligible items within 30 days of purchase with the original receipt. Refunds are issued to the original payment method.";
+  }
+
+  if (
+    message.includes("shipping") ||
+    message.includes("ship")
+  ) {
+    return "We offer free standard shipping on orders of $50 or more. Standard shipping usually takes 3-5 business days.";
+  }
+
+  if (
+    message.includes("payment") ||
+    message.includes("pay")
+  ) {
+    return "We accept Visa, Mastercard, American Express, Discover, and PayPal.";
+  }
+
+  if (
+    message.includes("track") ||
+    message.includes("order")
+  ) {
+    return "You can track your order using the tracking link in your shipping confirmation email.";
+  }
+
+  if (
+    message.includes("contact") ||
+    message.includes("email")
+  ) {
+    return "You can contact customer support Monday-Friday from 9 AM to 6 PM by email at support@example.com.";
+  }
+
+  return "I'm sorry, I don't have information about that yet. Type 'help' to see the topics I can answer.";
+}
+
+
+function sendMessage() {
+
+  const input = document.getElementById("userInput");
+  const chatBox = document.getElementById("chatBox");
+
+  const message = input.value.trim();
+
+  if (message === "") {
+    return;
+  }
+
+  const userMessage = document.createElement("div");
+  userMessage.className = "user";
+  userMessage.textContent = message;
+  chatBox.appendChild(userMessage);
+
+  const botMessage = document.createElement("div");
+  botMessage.className = "bot";
+  botMessage.textContent = getBotResponse(message);
+  chatBox.appendChild(botMessage);
+
+  input.value = "";
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+</script>
+
+</body>
+</html>
